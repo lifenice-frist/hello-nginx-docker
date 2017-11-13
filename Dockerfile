@@ -1,6 +1,6 @@
-FROM openshift/origin-base
+FROM nginx
 
-RUN yum install -y nginx && echo "Hello World" > /usr/share/nginx/html/index.html && \
+echo "Hello World" > /usr/share/nginx/html/index.html && \
     mkdir -p /usr/share/nginx/html/test && echo "Hello World Test" > /usr/share/nginx/html/test/index.html
 
 EXPOSE 80
